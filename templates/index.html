@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Цитаты</title>
+   <!-- Bootstrap CSS -->
+   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+   <style>
+       /* Устанавливаем высоту на весь экран */
+       html, body {
+           height: 100%;
+       }
+       .full-height {
+           height: 100vh; /* Полная высота экрана */
+       }
+   </style>
+</head>
+<body class="bg-light">
+
+    <div class="container full-height d-flex align-items-center justify-content-center">
+        <div class="text-center">
+            {% if excerpt %}
+                <h1>Цитата: {{ excerpt['content'] }}</h1>
+                <p>Автор: {{ excerpt['author'] }}</p>
+            {% else %}
+                <h1>Цитата не найдена</h1>
+            {% endif %}
+        </div>
+    </div>
+
+</body>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
